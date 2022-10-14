@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Aapka Painter</title>
+
+    <!-- #----------------CSS Area-----------------------# -->
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar {
+            position: fixed;
+            height: auto;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            z-index: 2;
+        }
+
+        .logo {
+
+            margin: 8px 0px 8px 12px;
+        }
+
+        .main-list {
+            display: flex;
+            margin: auto 10px auto 35px;
+
+
+        }
+
+        .main-list li {
+            list-style: none;
+            padding: 0px 15px 0px 15px;
+
+        }
+
+        .main-list li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .phn-num {
+            margin: auto 25px auto auto;
+
+        }
+
+        .phn-num h4 {
+            color: #fff;
+        }
+
+        .upper-main-area {
+            height: 100vh;
+
+        }
+
+        .upper-main-area::before {
+
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100Vh;
+            z-index: -2;
+            background: url('https://aapkapainter.com/assets/newdesign/images/homepage/main-image2.webp') no-repeat center center/cover;
+
+        }
+
+        .upper-main-area::after {
+
+
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            content: "";
+            z-index: -1;
+            height: 100%;
+            background: rgba(0, 0, 0, .5);
+        }
+
+        .btns {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 200px;
+            margin: auto;
+
+            justify-content: center;
+        }
+
+        .main-btn {
+            display: inline-block;
+            width: 145%;
+            background: #fff;
+            color: #444;
+            border: 0px;
+            font-size: 18px;
+            margin: 7px 0px;
+            box-shadow: 0 4px 6px rgb(0 0 0 / 16%);
+            padding: 16px 15px;
+            border-radius: 5px;
+
+
+        }
+
+        .btn-hover:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+
+        }
+
+        .btn-3 {
+            margin-top: 30px;
+            background: linear-gradient(to right, #f85562 0, #ea6955 63%, #f79f52 100%);
+        }
+
+
+        .services {
+            width: 90vw;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            margin: 60px auto 50px auto;
+            /* height: 500px; */
+        }
+
+        .headings {
+
+            display: inline;
+            font-size: 40px;
+            position: relative;
+
+            color: rgb(67, 67, 67);
+            margin: 0px auto 50px auto;
+        }
+
+
+        .service-box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        .service-box-hover:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .r1-box {
+            display: flex;
+            height: auto;
+            width: 100%;
+        }
+
+        .r2-box {
+
+            display: flex;
+            width: 100%;
+            height: auto;
+        }
+
+        .box-1 {
+
+            height: 300px;
+            width: 50%;
+            background: url(https://aapkapainter.com/assets/img/resized_images2/wall%20painting22.jpg) no-repeat center;
+
+        }
+
+        .box-1 a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            position: relative;
+            bottom: -129px;
+            top: 240px;
+
+            left: 222px;
+        }
+
+        .box-2 {
+
+            height: 300px;
+            width: 50%;
+            background: url(https://aapkapainter.com/assets/img/resized_images2/WhatsApp%20Image%202021-09-16%20at%205.53.33%20PM.jpg) no-repeat center;
+        }
+
+        .box-2 a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            position: relative;
+            bottom: -129px;
+            top: 240px;
+            left: 222px;
+        }
+
+        .box-3 {
+
+            height: 300px;
+            width: 35%;
+            background: url(https://aapkapainter.com/assets/img/resized_images2/WhatsApp%20Image%202021-09-16%20at%205.04.10%20PM.jpg) no-repeat center;
+        }
+
+        .box-4 {
+
+            height: 300px;
+            width: 30%;
+            background: url(https://aapkapainter.com/assets/img/resized_images2/green-interior-modern-interior-living-room-style-with-soft-sofa-green-wall-3d-rendering.jpg) no-repeat center;
+        }
+
+        .box-5 {
+
+            height: 300px;
+            width: 35%;
+            background: url(https://aapkapainter.com/assets/img/resized_images2/bedroom.jpg) no-repeat center;
+        }
+
+        .box-3 a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            position: relative;
+            bottom: -129px;
+            top: 240px;
+            left: 100px;
+        }
+
+        .box-4 a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            position: relative;
+            bottom: -129px;
+            top: 240px;
+            left: 75px;
+        }
+
+        .box-5 a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            position: relative;
+            bottom: -129px;
+            top: 240px;
+            left: 120px;
+        }
+
+
+
+        .paint-vis {
+            background-color: #f2f2f2;
+            ;
+            display: flex;
+            height: 700px;
+            margin-top: 20px;
+            padding-bottom: 150px;
+        }
+
+        .phn-img {
+
+
+
+            margin: auto 50px auto 50px;
+
+        }
+
+        .phn-img img {
+            height: 85%;
+            border-radius: 15px;
+
+        }
+
+        .right-area {
+            margin: 125px auto auto auto;
+        }
+
+        .pg1 h2 {
+            font-size: 30px;
+
+        }
+
+        .pg2 h5 {
+            font-size: 20px;
+            padding-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .paint-btn {
+            width: 250px;
+            height: 60px;
+
+
+        }
+
+        .paint-btn button {
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            background-color: #ffb74b;
+            color: white;
+            border: 0px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgb(0 0 0 / 16%);
+        }
+
+        .about-us {
+
+            height: 400px;
+            display: flex;
+
+            background: linear-gradient(108deg, #ffb84f, #c95ce3);
+        }
+
+        .left-area img {
+            position: relative;
+            top: -113px;
+        }
+
+
+        .explore-area {
+            margin: 50px auto 0px auto;
+            display: flex;
+        }
+
+        .text-center {
+
+            text-align: center;
+            width: 100vw;
+        }
+
+        .line-1 {
+            font-size: 30px;
+            color: #333;
+            ;
+
+        }
+
+        .line-2 {
+            font-size: 23px;
+            margin-top: 5px;
+            color: rgba(51, 51, 51, .8);
+
+        }
+
+        .explore-btn {
+
+            width: 100vw;
+            text-align: center;
+            margin: 15px auto;
+
+        }
+
+        .explore-btn button {
+            width: 16%;
+            color: white;
+            font-size: 20px;
+            border: 0px;
+            border-radius: 5px;
+            background: #ffb74b;
+            ;
+            height: 55px;
+            box-shadow: 0 4px 6px rgb(0 0 0 / 16%);
+
+        }
+
+        .explore-btn button:hover {
+
+            transform: scale(1.02);
+            cursor: pointer;
+
+        }
+
+        .explore-img {
+            display: flex;
+            width: 100vw;
+
+            margin: auto auto;
+
+            text-align: center;
+            height: 300px;
+            /* background-color: red; */
+
+        }
+
+        .img-style {
+            width: 30%;
+            margin: auto auto;
+            border: 2px solid balck;
+            border-radius: 10px;
+            height: 270px;
+            box-shadow: 0 6px 8px rgb(0 0 0 / 18%);
+
+
+        }
+
+        .explore-img img {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            height: 100%;
+
+
+        }
+
+        .products {
+            display: flex;
+            background: #fcfcfcc2;
+            flex-direction: column;
+        }
+
+        #p-head {
+            margin: 80px auto 30px auto;
+            width: 100vW;
+            text-align: center;
+        }
+
+        .product-r1 {
+            display: flex;
+            width: 100vw;
+        }
+
+        .product-r2 {
+            display: flex;
+            width: 100vw;
+            margin-top: 45px;
+        }
+
+        .p-box1 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Paint_Products.gif) no-repeat center;
+
+        }
+
+        .p-box2 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Paint%20Calculator.gif) no-repeat center;
+
+        }
+
+        .p-box3 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Color%20Visualizer.gif) no-repeat center;
+
+        }
+
+        .p-box4 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Textures.gif) no-repeat center;
+
+        }
+
+        .p-box5 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Interior%20Painting.gif) no-repeat center;
+
+        }
+
+        .p-box6 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Exterior%20Painting%20-%201.gif) no-repeat center;
+
+        }
+
+        .p-box7 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Stencils.gif) no-repeat center;
+
+        }
+
+        .p-box8 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Water%20Proofing%20-%201.gif) no-repeat center;
+
+        }
+
+        .p-box9 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Wood%20Painting.gif) no-repeat center;
+
+        }
+
+        .p-box10 {
+            background: url(https://aapkapainter.com/assets/img/resized_images3/Metal%20Painting%20-%201.gif) no-repeat center;
+
+        }
+
+        .product-box-style {
+            width: 15%;
+            margin: auto auto;
+            height: 180px;
+
+
+
+        }
+
+        .product-box-style:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+
+        .link-style {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            font-size: 18px;
+            position: relative;
+            left: 50px;
+            top: 180px;
+
+        }
+
+        #city-head {
+            margin: 100px auto 50px auto;
+            width: 100vw;
+            text-align: center;
+
+
+
+        }
+
+        .cities-list {
+            width: 100vw;
+            border-radius: 8px;
+
+            width: 97%;
+            margin: auto auto;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+            padding: 40px 0px;
+        }
+
+        .cities-list-r1 {
+            width: 100%;
+            margin: auto auto;
+            text-align: center;
+            display: flex;
+        }
+
+        .cities-list-r1 a {
+            text-decoration: none;
+
+            font-size: 22px;
+            color: #333;
+        }
+
+        .city-list-style {
+            margin: 5px 10px;
+
+            width: 13%;
+
+        }
+
+
+        .city-list-style img {
+            margin: auto 38px;
+            height: auto;
+            width: auto;
+            border-radius: 5px;
+            z-index: -1;
+        }
+
+        /* .vertical-line{
+            width: 0px;
+            color: black;
+            height: 50px;
+            border: 1px solid black;
+        } */
+
+        .text-area-faq {
+
+            border-radius: 8px;
+
+
+            width: 71%;
+            margin: auto auto;
+
+
+        }
+
+        .main-line-style {
+            color: #333;
+            font-size: 25px;
+            margin: 15px auto;
+
+        }
+
+        .second-line-style {
+            color: rgba(51, 51, 51, .8);
+            font-size: 18px;
+            margin-bottom: 30px;
+
+        }
+
+        .all-que-btn {
+            position: relative;
+            bottom: 40px;
+
+
+        }
+
+        .offer-you h1 {
+            position: relative;
+            bottom: 50px;
+        }
+
+        .offers {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .offers-box {
+            width: 100%;
+            margin: auto auto;
+            text-align: center;
+        }
+
+        .offers-box a {
+            text-decoration: none;
+            color: #333;
+            font-size: 22px;
+
+        }
+
+        .offers-box img {
+            width: 90px;
+            height: 90px;
+
+
+        }
+
+        .git-head {
+            margin: 50px auto 50px auto;
+            width: 100vw;
+            text-align: center;
+            height: 60px;
+
+
+            background: whitesmoke;
+        }
+
+        .git-head h1 {
+            justify-content: center;
+            position: relative;
+            top: 12px;
+            color: #333;
+            ;
+        }
+
+        .git-area {
+            display: flex;
+            position: relative;
+            bottom: 50px;
+            height: 100vh;
+        }
+
+        .git-area::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100Vh;
+            z-index: -2;
+            background: url('https://aapkapainter.com/assets/newdesign/resized/form_image.jpg') no-repeat center;
+        }
+
+        .git-area::after {
+            position: absolute;
+
+            width: 100%;
+            content: "";
+            z-index: -1;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .git-left-area {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+            justify-content: center;
+
+        }
+
+        .git-lines-style {
+            color: white;
+            font-size: 25px;
+            margin: 10px auto;
+        }
+
+        .git-line3 h1 {
+            color: #f49f52;
+            font-size: 60px;
+            margin: 15px auto;
+        }
+
+        .git-right-area {
+            width: 40%;
+            margin: auto auto;
+            height: 70vh;
+
+
+
+            border-radius: 10px;
+
+
+
+        }
+
+        .git-form {
+            height: 70vh;
+            width: 73%;
+
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 17px rgb(0 0 0 / 15%);
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .form-box-style {
+            justify-content: center;
+            height: 100%;
+            margin: 20px auto;
+            /* width: 50px; */
+
+        }
+
+        .form-box-flex {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-box-style-main {
+            width: 380px;
+            border-radius: 5px;
+            border: 1px solid rgb(134, 131, 131);
+            text-align: center;
+            margin: auto auto;
+            height: 30px;
+        }
+
+        .form-lable-syle {
+            position: relative;
+            bottom: -8px;
+            right: -40px;
+            width: 39px;
+            display: block;
+            background: white;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .phn-num-style {
+            width: 76px;
+        }
+
+        .submit-btn-style {
+            background: #e04960 !important;
+            padding: 4% !important;
+            color: #fff !important;
+            border-radius: 30px !important;
+            font-size: 14px !important;
+            font-weight: 700;
+            letter-spacing: .5px;
+            border: 0px;
+            width: 200px;
+
+        }
+
+        .submit-btn-style:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+
+        .vertical-text {
+
+            writing-mode: vertical-rl;
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            top: 310px;
+            z-index: 20;
+        }
+
+        .v-text-style {
+            box-shadow: 2px 0px 2px 0px grey;
+            writing-mode: vertical-lr;
+            background: #ff5a5a;
+            width: 25px;
+            height: 120px;
+            justify-items: center;
+            text-align: center;
+            position: relative;
+            padding: 5px 5px 5px 10px;
+            margin: 12px auto;
+            border-radius: 0px 10px 10px 0px;
+
+
+
+        }
+
+        .v-text-style a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-area {
+            width: auto;
+            margin-bottom: 0px;
+            text-align: center;
+            height: 50px;
+            padding: 15px 0px 0px 0px;
+            background-color: whitesmoke;
+            color: gray;
+
+
+
+        }
+
+        .footer-area a {
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+
+
+
+    <!-- ----------------------------------- Navbar --------------------------------------------------- -->
+
+
+
+    <div class="navbar">
+
+        <div class="logo">
+            <img src="https://aapkapainter.com/assets/newdesign/images/logo/newlogo.gif" alt="loding...">
+        </div>
+
+        <div class="main-list">
+            <li><a href="https://aapkapainter.com/recent-projects">RECENTS PROJECTS</a></li>
+            <li><a href="https://aapkapainter.com/paints/asian-paints-prices/1">PAINTS</a></li>
+            <li><a href="https://aapkapainter.com/bedroom-colour-combination">COLOR COMBINATION</a></li>
+            <li><a href="https://aapkapainter.com/textures-design">PRODUCT</a></li>
+            <li><a href="https://aapkapainter.com/interior-painting">SERVICES</a></li>
+            <li><a href="https://aapkapainter.com/blog/">BLOG</a></li>
+            <li><a href="https://aapkapainter.com/asian-paints-shade-card">MORE</a></li>
+        </div>
+
+        <div class="phn-num">
+
+            <h4>
+                8088 777 173
+            </h4>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- --------------------------------- Slide Imgs ------------------------------------------->
+
+
+
+    <div class="upper-main-area">
+
+
+
+        <div class="btns ">
+            <button class="btn-1 main-btn">
+                Estimate Paintting Cost
+            </button>
+
+            <button class="btn-2 main-btn">
+                Estimate Waterproofing Cost
+            </button>
+
+            <button class="btn-3 main-btn btn-hover">
+                Book Free Inspection
+            </button>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ------------------------------------------Services------------------------------------------------------------- -->
+
+
+
+    <div class="services">
+
+        <div class="headings">
+            Services
+        </div>
+
+        <div class="service-box">
+
+            <div class="r1-box ">
+
+                <div class="box-1 service-box-hover">
+                    <a href="#">Wall Paintting</a>
+                </div>
+
+                <div class="box-2 service-box-hover">
+                    <a href="#">Waterproofing Service</a>
+                </div>
+            </div>
+
+            <div class="r2-box ">
+                <div class="box-3 service-box-hover">
+                    <a href="#">Wall Stencil Painting</a>
+                </div>
+
+                <div class="box-4 service-box-hover">
+                    <a href="#">Living Rool Painting</a>
+                </div>
+
+                <div class="box-5 service-box-hover">
+                    <a href="#">Bedroom Painting</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- -----------------------------Paint Visualizer------------------------------ -->
+
+    <div class="paint-vis">
+        <div class="phn-img">
+            <img src="https://aapkapainter.com/assets/newdesign/images/homepage/cre-screens.jpg" alt="loding...">
+        </div>
+
+        <div class="right-area">
+
+            <div class="pg1">
+                <h2>
+                    Looking for the best painters or painting services for your home?
+                </h2>
+                <div class="pg2">
+                    <h5>
+                        No matter where on earth we go, we act in response to colors. However, the significance of color
+                        is often undervalued. Choosing the right painters for our home is essential to us. And the
+                        easiest way to pick the most excellent paint colors is to start with our simple color engine.
+                        Check out the extensive range of splendid colors, and the conventional color schemes won't bind
+                        you for a scrupulous decorating style. Our paint visualizer provides a breathtaking way to
+                        create inspiration boards for your much-loved ideas. So you can keep all your color ideas in one
+                        dot. Aapkapainter’s color engine is the sneakiest way to add color to your walls without losing
+                        the comforting vibe of the room.
+                    </h5>
+
+
+                    <div class="paint-btn">
+                        <button class="btn-hover">Paint Visualizer Tool</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------About Us ------------------------------------------------ -->
+
+
+    <div class="about-us">
+
+
+        <div class="left-area">
+            <img src="https://aapkapainter.com/assets/newdesign/images/homepage/painting-model.png" alt="">
+        </div>
+
+        <div class="right-area">
+            <div class="line-1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse adipisci dolorem ut vel repudiandae quod
+                tenetur nemo, laborum harum libero.
+
+            </div>
+            <div class="line-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nam dolores nobis facere perspiciatis
+                tenetur veniam reprehenderit ad veritatis explicabo, necessitatibus facilis? Ex, quibusdam ipsa ullam
+                aliquam quam veritatis, est odit dolor modi vitae consectetur inventore adipisci sint. Voluptate,
+                reiciendis?
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- -----------------------Explore More------------------------------------- -->
+
+    <div class="explore-area">
+        <div class="text-area">
+            <div class="line-1 text-center">
+                Want your walls look like this?
+            </div>
+            <div class="line-2 text-center">
+                Check out our collection for inspiration
+            </div>
+
+            <div class="explore-btn">
+                <button> Exlore All </button>
+            </div>
+
+            <div class="explore-img">
+
+                <div class="img-1 img-style">
+                    <img src="https://aapkapainter.com/assets/newdesign/images/homepage/main-image1.jpg" alt="">
+                </div>
+
+                <div class="img-2 img-style">
+                    <img src="https://aapkapainter.com/assets/newdesign/images/homepage/main-image2.jpg" alt="">
+                </div>
+
+                <div class="img-3 img-style">
+                    <img src="https://aapkapainter.com/assets/newdesign/images/homepage/main-image3.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ----------------------------------Product ans Services----------------------- -->
+    <div id="p-head">
+        <h1>Product & Services</h1>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <div class="product-r1">
+            <div class="p-box1 product-box-style">
+
+
+                <a class="link-style" href="#">
+                    Paint Product
+                </a>
+
+            </div>
+            <div class="p-box2 product-box-style">
+                <a class="link-style" href="#">
+                    Paint Calculator
+                </a>
+
+            </div>
+            <div class="p-box3 product-box-style">
+                <a class="link-style" href="#">
+                    Color Visualizer
+                </a>
+
+            </div>
+            <div class="p-box4 product-box-style">
+                <a class="link-style" href="#">
+                    Textures
+                </a>
+
+            </div>
+            <div class="p-box5 product-box-style">
+                <a class="link-style" href="#">
+                    Interior Painting
+                </a>
+
+            </div>
+        </div>
+        <div class="product-r2 ">
+            <div class="p-box6 product-box-style">
+                <a class="link-style" href="#">
+                    Exterior Painting
+                </a>
+            </div>
+            <div class="p-box7 product-box-style">
+                <a class="link-style" href="#">
+                    Stencils
+                </a>
+
+            </div>
+            <div class="p-box8 product-box-style">
+                <a class="link-style" href="#">
+                    Waterproofing
+                </a>
+
+            </div>
+            <div class="p-box9 product-box-style">
+                <a class="link-style" href="#">
+                    Wood Painting
+                </a>
+
+            </div>
+            <div class="p-box10 product-box-style">
+                <a class="link-style" href="#">
+                    Metal Painting
+                </a>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- --------------------------------Cities List---------------------------------->
+    <div id="city-head">
+        <h1>We Are In</h1>
+    </div>
+    <div class="cities-list">
+
+        <div class="cities-list-r1">
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-bangalore.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Benglore
+                </div>
+            </a>
+
+
+
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-mumbai.jpg"
+                    alt="loding..">
+
+                <div class="city-name">
+                    Mumbai
+                </div>
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-hyderabad.jpg"
+                    alt="loding..">
+
+                <div class="city-name">
+                    Hyderabad
+                </div>
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-pune.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Pune
+                </div>
+
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-delhi.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Delhi
+                </div>
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-chennai.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Chennai
+                </div>
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-kolkata.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Kolkata
+                </div>
+            </a>
+        </div>
+
+        <div class="cities-list-r2 cities-list-r1 ">
+
+
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-chennai.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Ghaziabad
+                </div>
+            </a>
+
+
+
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-kolkata.jpg"
+                    alt="loding..">
+
+                <div class="city-name">
+                    Faridabad
+                </div>
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-noida.jpg"
+                    alt="loding..">
+
+                <div class="city-name">
+                    Noida
+                </div>
+            </a>
+            <a class="city-list-style" href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/logo-painters-in-gurugram.jpg"
+                    alt="loding..">
+                <div class="city-name">
+                    Gurugram
+                </div>
+
+            </a>
+
+
+
+        </div>
+
+    </div>
+    <!-- ----------------------------------FAQ----------------------------------------------------------- -->
+
+
+    <div id="city-head">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <div class="faq cities-list">
+
+        <div class="text-area-faq">
+            <div class="main-line-style">
+                What is Aapkapainter?
+            </div>
+            <div class="second-line-style">
+                Aapkapainter.com is the easiest way to paint your home or office, bringing in technology, automation and
+                service guarantee. Aapkapainter manages the entire painting process online, from paint selection, to
+                quotes to service booking, project management and payment. We, at AapkaPainter, are on a mission to
+                revolutionize the way homes get painted.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                What is the overall house painting procedure once the quote is requested?
+            </div>
+            <div class="second-line-style">
+                You will receive a call from our painting experts very soon. Then as per your comfort, we schedule a
+                visit at your site and our qualified engineers will guide you with all your residential painting service
+                requirements along with helping you choose the right paint product, keeping your budget intact. Further,
+                you get an email with completely customized quotation on the same day (in the best of situations). View
+                your quotation, along with detailed measurements on your dashboard. We are always available, should you
+                need any clarification or further customization.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Why Aapkapainter and not any local painter?
+            </div>
+            <div class="second-line-style">
+                We are true to our work and words. We do not charge a lump sum. We measure the exact square foot. Use
+                the exact materials promised. And yes, we deliver on time, always. All of Aapkapainter's painters are
+                trained and background checked, and there is a full team of project managers to guarantee job completion
+                and complete satisfaction in home painting service.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Latest Home Painting Servicing Ideas
+            </div>
+            <div class="second-line-style">
+                Whether you’re looking to get interior house painting service done with the best wall paints, want to
+                revamp your home furniture that is looking a little worn out or give the metal surfaces in your home a
+                nice shiny look with some polishing, our painting ideas have got you covered.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                How do we operate?
+            </div>
+            <div class="second-line-style">
+                We are here to help you with all your painting needs. One of the best house painting services in the
+                business, Aapkapainter offers a range of professional home painting services including interior and
+                exterior painting, wood painting and metal painting. We offer excellent bang for your buck with
+                affordable house painting costs.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Services Provided by Aapkapainter
+            </div>
+            <div class="second-line-style">
+                When you start searching extensively for wall painters in Mumbai, Bangalore, Hyderabad, Chennai and
+                other big cities in India, you might find a plethora of home painting services but then you need to
+                choose the best option. When you find the one, you need to explain how you envision your home and the
+                end result doesn’t turn out the way you had expected it. This is a problem that most of you face. With
+                us you don’t have to look for ‘painters near me’ or ‘house painters near me’ anymore as we are already
+                associated with some of the best painters in Bangalore, Mumbai and other major cities.
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div class="all-que-btn explore-btn">
+        <button>All Questions</button>
+    </div>
+
+    <!-- ---------------------------offer------------------------- -->
+
+
+    <div id="city-head" class="offer-you">
+        <h1>What We Can Offer You </h1>
+    </div>
+    <div class="offers cities-list">
+        <div class="offers-box">
+            <a href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/apk1.jpg" alt="loding...">
+                <div>Genuine Price</div>
+            </a>
+
+        </div>
+        <div class="offers-box">
+            <a href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/apk2.jpg" alt="loding...">
+                <div>1 Year Warranty</div>
+            </a>
+
+        </div>
+        <div class="offers-box">
+            <a href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/apk3.jpg" alt="loding...">
+                <div>Custom Design</div>
+            </a>
+
+        </div>
+        <div class="offers-box">
+            <a href="#">
+                <img src="https://aapkapainter.com/assets/newdesign/images/homepage/apk4.jpg" alt="loding...">
+                <div>Dedicated Project <br> Manager </div>
+            </a>
+
+        </div>
+
+    </div>
+    <!-- -----------------------------------------------------Latest Wall Painting Ideas---------------------------- -->
+    <div id="city-head">
+        <h1>Latest Wall Painting Ideas</h1>
+    </div>
+
+    <div class="faq cities-list">
+
+        <div class="text-area-faq">
+            <div class="main-line-style">
+                Interior Home Painting Ideas
+            </div>
+            <div class="second-line-style">
+                Gone are the days when people only used to paint their walls only using a single accent colour. Nowadays
+                people want to decorate their walls with a snazzy interior wall design giving it a more personalised
+                touch and the decor of your choice. While there are a number of house painting ideas such as colour
+                blocking, vertical stripes, waves and more that are most liked by people, think of the interiors of your
+                home as a blank canvas and make the walls come alive with your imagination. <br> If you want your walls
+                to truly stand out, you can come up with some unique freehand designs and let your creativity flow.
+                While there’s no specific room interior colour for bedroom, drawing room, kitchens and others, there’s a
+                rule of thumb that the bedroom being a place where you relax, it’s better to choose colours that have a
+                calming effect. On the other hand, you can choose from shades that create excitement and have an
+                energizing vibe for your drawing room. Needless to say, the cost for home painting service or painting a
+                house wall interior depends on a number of factors such as the area to be painted, cost of the paint you
+                pick, the complexity of the designs to name a few.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Wall Texture House Painting Catalogue
+            </div>
+            <div class="second-line-style">
+                A sure shot way to amp up the decor of your home is to use a premium wall texture design. You can create
+                texture paint designs from absolutely anything, anything from tissue paper, sand to strings, sawdust or
+                even rice and pasta, the options are practically endless. <br><br>Now the texture you choose should
+                blend with the decor of your home. If you wish to give your space a rustic look and feel, you might want
+                to stick with the conventional designs or pick some out of the box designs to give your home a funky
+                vibe. No matter which design you choose for your house painting service, you would need professional
+                texture painters for home.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Exclusive Wall Stencils for Home PaintingWhy Aapkapainter and not any local painter?
+            </div>
+            <div class="second-line-style">
+                Another great way to add more character to your walls and embellish them with attractive designs is to
+                use wall paint stencils. Give your home a new personality with a new pattern using Asian paints
+                stencils. You can choose from geometric shapes, ethnic patterns, theme-based, patterns inspired by
+                nature and much more.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Wood Painting too!
+            </div>
+            <div class="second-line-style">
+                Your wooden furniture with time loses its shine and sometimes even becomes riddled with stains. The best
+                way to revamp your old furniture is to coat it with specialised wood paint. We have a dedicated bunch of
+                wood painters with expertise in wood polish, wood texture backgrounds and much more.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Why do you need Metal Painting?
+            </div>
+            <div class="second-line-style">
+                To give your wall a nice textured metallic look and protect your metal surfaces at home from corrosion
+                and give them a good shiny finish, you need metallic wall paint and skilled metal painters who can get
+                the job done for you. Don’t worry about the metallic paint price as value far outweighs the cost.
+
+            </div>
+
+            <hr>
+            <div class="main-line-style">
+                Exterior House Painting Design Ideas
+            </div>
+            <div class="second-line-style">
+                While it’s important to focus on the decor of the interiors of your home, you also need to extend the
+                same care beyond the walls of your home. Exterior painting not just beautifies your home from the
+                outside but also protects against cracking, peeling, fading and the sudden changes in weather. Explore
+                our exterior painting services and wall painting services to protect and jazz up the exterior wall
+                texture now! <br><br>But before you book home painting services, there are a few parameters that you
+                need to consider such as the condition of the surface, material, UV exposure and more and that’s why you
+                need specially designed exterior home colours and exterior house painters to apply them.
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- -----------------------------------------Get in Touch ----------------------------------- -->
+
+
+    <div class="git-head">
+        <h1>Get In Touch</h1>
+    </div>
+
+
+    <div class="git-area">
+
+        <div class="git-left-area">
+
+            <div class="git-line1 git-lines-style">
+                <p>Get your house painted with India's most trusted brand</p>
+            </div>
+            <div class="git-line2 git-lines-style">
+                <p>We've delivered</p>
+            </div>
+            <div class="git-line3">
+                <h1>20832+</h1>
+            </div>
+            <div class="git-line4 git-lines-style">
+                <p>Happy home stories and counting...
+                </p>
+            </div>
+
+        </div>
+
+        <div class="git-right-area">
+
+            <div class="git-form">
+                <form action="{% url 'savedata' %}" method="post">
+                    {% csrf_token %}
+                    <h2>Lets's Connect</h2>
+                    <div class="git-form-line form-box-style">
+                        Get Free Estimation and Colour Consultation <br>From Our Experts
+
+                    </div>
+
+                    <div class="user-name form-box-style form-box-flex">
+                        <label class="form-lable-syle" for="user_name">Name</label>
+                        <input class="form-box-style-main" type="text" name="user_name" id="user_name">
+                    </div>
+
+                    <div class="phn-num form-box-style form-box-flex">
+                        <label class="form-lable-syle phn-num-style" id="phn-num" for="phn-num">Phone Num</label>
+                        <input class="form-box-style-main" type="number" name="phn_num" id="phn-num">
+                    </div>
+
+
+                    <div class="email-id form-box-style form-box-flex">
+                        <label class="form-lable-syle" for="user-name">Email</label>
+                        <input class="form-box-style-main" type="email" name="email_id" id="email-id">
+                    </div>
+
+                    <div class="h4 form-box-style">Service Type</div>
+
+                    <div class="service-type form-box-style ">
+                        <label class="form-lable-style " for="interior">Interior</label>
+                        <input type="checkbox" name="interior" id="interior" value="Interior">
+
+
+                        <label class="form-lable-style " for="Exterior">Exterior</label>
+                        <input type="checkbox" name="exterior" id="Exterior" value="Exterior">
+
+
+                        <label class="form-lable-style " for="Waterproofing">Waterproofing</label>
+                        <input type="checkbox" name="waterproofing" id="Waterproofing" value="Waterproofing">
+                    </div>
+                    <div class="input-btn">
+                        <button id="form-submit-btn" value="submit" onclick="info()" class="submit-btn-style"> Enquire
+                            Now</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="vertical-text">
+        <div class="text-1 v-text-style">
+
+            <a href="#">Enquire Now</a>
+        </div>
+        <div class="text-2 v-text-style">
+            <a href="#">Paint Cost</a>
+        </div>
+    </div>
+    <div class="footer-area">
+        <footer>
+            <a href="#">Privacy | Terms and Conditions</a>
+            <div>&copy; @2022 AapkaPainter Solutions Pvt Ltd.</div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            console.log('Hello This is JQuery')
+
+            $("#form-submit-btn").click(function () {
+                alert("Form Submitted")
+
+            })
+        })
+    </script>
+</body>
+
+</html>
