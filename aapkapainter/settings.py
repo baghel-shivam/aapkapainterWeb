@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$9@fbje&x7ja9xb2cbn+0iy7r-5h*sjs9a4rqiacbco8vnjavw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['main.d3okec3o1ytclo.amplifyapp.com']
 
 
 # Application definition
@@ -78,6 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'HOST':'main.d3okec3o1ytclo.amplifyapp.com'
     }
 }
 
